@@ -6,26 +6,27 @@
 
 1.使用eclipse 新建工程 -> 引进依赖                                         
  (这里先引入 hadoop-common-2.7.3.jar 类，后面在需要其他的时候再度引入)          
- ![图片](https://github.com/Hiooary/hadoop_3.io/blob/master/images/andExterl.PNG)
+ ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/andExterl.PNG)
 
 2.在eclipse 中写代码，读取文件(只读不能写)                                   
   新建包 ->新建类                                                            
- ![图片](https://github.com/Hiooary/hadoop_3.io/blob/master/images/AppOne.PNG)
+ ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/AppOne.PNG)
 
 3.在 Hadoop 中操作文件
-  <br># cd /root/Downloads 
-      # ls 
-      # vi hello (写入内容) 
-      # hadoop fs -put hello / (上传文件)</br>
+  <br>
+  # cd /root/Downloads 
+  # ls 
+  # vi hello (写入内容) 
+  # hadoop fs -put hello / (上传文件)</br>
   
   显示拒绝连接，无法上传文件。分析了一下，应该是进程没有开启，在 hadoop 目录下运行 sbin/start-all.sh 启动
-  ![图片](https://github.com/Hiooary/hadoop_3.io/blob/master/images/APP1.PNG)  
+  ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/APP1.PNG)  
 
   启动之后，果然可以上传
-  ![图片](https://github.com/Hiooary/hadoop_3.io/blob/master/images/APP2.PNG)  
+  ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/APP2.PNG)  
   
   在浏览器中访问 jxyy:50070 可以看到刚刚写的文件
-  ![图片](https://github.com/Hiooary/hadoop_3.io/blob/master/images/AppOne.PNG)
+  ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/AppOne.PNG)
  
 
 
