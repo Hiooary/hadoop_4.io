@@ -26,7 +26,7 @@
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/APP2.PNG)  
   
   在浏览器中访问 jxyy:50070 可以看到刚刚写的文件
-  ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/AppOne.PNG)
+  ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/hello.PNG)
   
   但是出错运行，如图，是hadoop-2.7.3版本的源码与eclipse不兼容
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/AppOne.PNG)
