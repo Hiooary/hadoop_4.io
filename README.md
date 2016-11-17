@@ -32,7 +32,7 @@
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/xxxx.PNG)
   
   换成了hadoop-1.2.1的源码，运行出错，如图，是因为本地和虚拟机无法通信，再次配置虚拟机的ip
-  ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/try.PNG)
+  ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/retry.PNG)
   
   能通信之后，运行还是有问题，如图，提示服务器的ipc和版本不能通信，因为ubuntu里配置的是hadoop-2.7.3版本
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/version.PNG)
