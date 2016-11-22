@@ -25,7 +25,7 @@
   启动之后，果然可以上传
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/APP2.PNG)  
   
-  在浏览器中访问 jxyy:50070 可以看到刚刚写的文件
+  在浏览器中访问 jxy:50070 可以看到刚刚写的文件
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/hello.PNG)
   
   但是出错运行，如图，<b>Could not find the main class:AppOne. Program will exit.</b> 应该是hadoop-2.7.3版本的源码与eclipse不兼容，控制台也可以看出，<b>java.lang.UnsupportedClassVersionError: AppOne : Unsupported major.minor version 51.0，</b>版本不行                                                                                                                     
