@@ -31,7 +31,7 @@
   但是出错运行，如图，<b>Could not find the main class:AppOne. Program will exit.</b> 应该是hadoop-2.7.3版本的源码与eclipse不兼容，控制台也可以看出，<b>java.lang.UnsupportedClassVersionError: AppOne : Unsupported major.minor version 51.0，</b>版本不行                                                                                                                     
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/main.PNG)
   
-  按照网上的方法配置运行版本，任然有问题。                                                   
+  按照网上的方法配置运行版本，仍然有问题。                                                   
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/com.PNG)
   
   换成了hadoop-1.2.1的源码，运行出错，如图，<b>Retrying connect to server: . Already tried 0 time(s); maxRetries=45...</b>，是因为本地和虚拟机无法通信，再次配置虚拟机的ip                                                                      
@@ -47,7 +47,7 @@
   查看logs目录下的相关日志文件，意思是路径不存在。<b>ERROR org.apache.hadoop.hdfs.server.datanode.DataNode: java.io.IOException: All specified directories are not accessible or do not exist. 呵呵</b>                                                       
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/error.PNG)
   
-  在有 DataNode 节点启动的情况下，在eclipse运行程序，如图，<b>Can not create a Path from an empty string，我不知道为啥啊</b>
+  在有 DataNode 节点启动的情况下，在eclipse运行程序，如图，<b>Can not create a Path from an empty string</b>
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/empty.PNG)
   
   又想了一个方法：既然是eclipse 和源码的版本不兼容，那就利用eclipse自带的 export 功能将java文件打包成 .jar 文件放进ubuntu系统中运行，如图，提示找不到类，<b>Exception in thread "main" java.lang.NoClassDefFound:org/apache/commons/logging/LogFactory </b>             
@@ -64,6 +64,15 @@
   
   安装之后打包java文件进行运行。还是不行哈。<b>Exception in thread "main" java.lang.reflect.InvocationTargetException，我还是不知道为啥啊</b>                                                                        
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/reflect.PNG)
+  
+  分析了一下，应该是跟文件的路径有关系。在 hadoop 里面输入命令 <b># hadoop fs -ls</b>可以看到文件存放相关信息。但是由于之前启动 DataNode 重新格式化过 hadoop，所以文件已经更新，在浏览器里面也查看不到                                                                        
+  ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/lls.PNG)
+  
+  重新上传一下文件，可以查看，版本的原因，默认的路径可能是 <b>/</b>，或者<b>./</b>                                                       
+  ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/putagain.PNG)
+  
+  再次运行 java 文件，可以看到文件内容                                                                                    
+  ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/cat.PNG)
   
   <b>专业挖坑啊。。。坑的是自己啊，能遇的问题都遇到了，鬼知道我经历了些什么，，，，不想深说，微笑脸，微笑脸</b>
   
