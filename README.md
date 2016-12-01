@@ -65,7 +65,7 @@
   安装之后打包java文件进行运行。还是不行哈。<b>Exception in thread "main" java.lang.reflect.InvocationTargetException，我还是不知道为啥啊</b>                                                                        
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/reflect.PNG)
   
-  分析了一下，应该是跟文件的路径有关系。在 hadoop 里面输入命令 <b># hadoop fs -ls</b>可以看到文件存放相关信息。但是由于之前启动 DataNode 重新格式化过 hadoop，所以文件已经更新，在浏览器里面也查看不到                                                                        
+  分析了一下，也许和 eclipse 里面的 <b> Can not create a Path from an empty string </b>有关，应该是跟文件的路径的原因。在 hadoop 里面输入命令 <b># hadoop fs -ls</b>可以看到文件存放相关信息。但是由于之前启动 DataNode 重新格式化过 hadoop，所以文件已经更新，在浏览器里面也查看不到                                                                                                                              
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/lls.PNG)
   
   重新上传一下文件，可以查看，版本的原因，默认的路径可能是 <b>/</b>，或者<b>./</b>                                                       
