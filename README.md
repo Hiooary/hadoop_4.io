@@ -41,7 +41,7 @@
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/version.PNG)
   
   于是纠结一番之后，决定装个hadoop-1.2.1的版本，利用虚拟机自带的克隆操作，再修改相关的配置文件，倒是很快安装了，但是启动不了datanode，start-all.sh没有报错，但是 jps 看不到Datanode进程。好不容易启动了，节点也会很快就死了。<b>所以这里还是有问题啊</b>
-  
+  后面发现是 core-site.xml 的配置 hadoop.tmp.dir 路径问题。
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/jps.PNG)
   
   查看logs目录下的相关日志文件，意思是路径不存在。<b>ERROR org.apache.hadoop.hdfs.server.datanode.DataNode: java.io.IOException: All specified directories are not accessible or do not exist. 呵呵</b>                                                       
