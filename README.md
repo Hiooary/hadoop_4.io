@@ -14,10 +14,10 @@
 
 3.在 Hadoop 中操作文件
   <br><b>
-  # cd /root/Downloads                                                                        
-  # ls                                                                                         
-  # vi hello (写入内容)                                                                                    
-  # hadoop fs -put hello / (上传文件)</b></br>
+  cd /root/Downloads                                                                        
+  ls                                                                                         
+  vi hello (写入内容)                                                                                    
+  hadoop fs -put hello / (上传文件)</b></br>
   
   显示拒绝连接，无法上传文件。<b>failed on connection exception:java.net.ConnectionException:拒绝连接；</b>分析了一下，应该是进程没有开启，在 hadoop 目录下运行 sbin/start-all.sh 启动                                                             
   ![图片](https://github.com/Hiooary/hadoop_4.io/blob/master/images/APP1.PNG)  
